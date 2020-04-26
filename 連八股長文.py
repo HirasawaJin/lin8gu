@@ -307,16 +307,7 @@ def 開心樂園餐():
     print("\n")
     
 
-餐牌 = [屌老母(),
-        問點解(),
-        求其一條戰線()[0] + "戰線" + 著哂火要人(),
-        condom(),
-        已經提哂水(),
-        問係咪(),
-        其實我哋(),
-        唔准再講(),
-        應承我(),
-        如果唔係()]    
+   
     
 while True:
     query = input("你想要幾多字？ : ")
@@ -329,13 +320,17 @@ while True:
         
         while wordlimit > 0:
             for lines in range(random.randint(5,20)):
+                餐牌 = [屌老母(),問點解(),求其一條戰線()[0] + "戰線" + 著哂火要人(),condom(),
+                已經提哂水(),問係咪(),其實我哋(),唔准再講(),應承我(),如果唔係()] 
                 sentence = 餐牌[random.randint(0,len(餐牌)-1)]
                 if sentence[-1]  != "！" or sentence[-1]  != "？" :
                     puncation = ["，","。"]
                     sentence = sentence + puncation[random.randint(0,len(puncation)-1)]
                     print(sentence.strip() , end=(""))
                     wordlimit -= len(sentence)
-                    
+            餐牌 = [屌老母(),問點解(),求其一條戰線()[0] + "戰線" + 著哂火要人(),condom(),
+            已經提哂水(),問係咪(),其實我哋(),唔准再講(),應承我(),如果唔係()] 
+            sentence = 餐牌[random.randint(0,len(餐牌)-1)]        
             if sentence[-1] == "，":
                 sentence = 餐牌[random.randint(0,len(餐牌)-1)]
                 if sentence[-1]  != "！" or sentence[-1]  != "？" :
