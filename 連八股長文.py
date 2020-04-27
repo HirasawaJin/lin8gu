@@ -128,7 +128,7 @@ def 屌老母():
                     "你哋係咪想輸？",
                     "我屌哂你地老母，你哋係咪想輸？",
                     "係咪仲未有人意識到" + 著哂火要人() + "有幾嚴重？",
-                    "點解" + 幾時() + 召喚爸爸() + "嗰單嘢沉得咁快"] 
+                    "點解" + 幾時() + 召喚爸爸() + "嗰單嘢沉得咁快？"] 
     成句野 = 屌老母大全[random.randint(0,len(屌老母大全)-1)]
     return 成句野
 
@@ -190,7 +190,7 @@ def 問點解():
 def condom():
     八股文 = [召喚爸爸(),戰線手足()]
     前 = str(八股文[random.randint(0,len(八股文)-1)])
-    後 = "係咪已經變成condom"
+    後 = "係咪已經變成condom？"
     成句野 = 前 + 後
     return 成句野
     
@@ -330,15 +330,25 @@ while True:
         wordlimit = int(query)
         
         while wordlimit > 0:
-            for lines in range(random.randint(5,20)):
+            for lines in range(random.randint(5,20)):            
+            
                 餐牌 = 睇餐牌()
                 sentence = 餐牌[random.randint(0,len(餐牌)-1)].strip()
-                if sentence[-1]  != "！" or sentence[-1]  != "？" :
+                if sentence[-1]  == "！" :
+                    sentence = sentence
+                    print(sentence.strip() , end=(""))
+                    wordlimit -= len(sentence)
+                elif sentence[-1]  == "？" :
+                    sentence = sentence
+                    print(sentence.strip() , end=(""))
+                    wordlimit -= len(sentence)
+                elif wordlimit <= 0:
+                    break
+                else :
                     puncation = ["，","。"]
                     sentence = sentence + puncation[random.randint(0,len(puncation)-1)]
                     print(sentence.strip() , end=(""))
-                    wordlimit -= len(sentence)
-                    
+                    wordlimit -= len(sentence)                    
                 
             if sentence[-1]!="！" or sentence[-1]!="？" or sentence[-1]!="。" :
                 餐牌 = [唔准再講(),應承我(),如果唔係()]
