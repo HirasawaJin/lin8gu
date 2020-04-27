@@ -350,7 +350,7 @@ while True:
                     print(sentence.strip() , end=(""))
                     wordlimit -= len(sentence)                    
                 
-            if sentence[-1]!="！" or sentence[-1]!="？" or sentence[-1]!="。" :
+            if sentence[-1]=="，" :
                 餐牌 = [唔准再講(),應承我(),如果唔係()]
                 sentence = 餐牌[random.randint(0,len(餐牌)-1)].strip() 
                 puncation = "。"
